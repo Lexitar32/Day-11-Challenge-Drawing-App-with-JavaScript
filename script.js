@@ -13,21 +13,21 @@ let color = 'black'
 let x
 let y
 
-canvas.addEventListener('mousedown', (e) => {
+canvas.addEventListener('ontouchstart', (e) => {
     isPressed = true
 
     x = e.offsetX
     y = e.offsetY
 })
 
-canvas.addEventListener('mouseup', (e) => {
+canvas.addEventListener('ontouchdown', (e) => {
     isPressed = false
 
     x = undefined
     y = undefined
 })
 
-canvas.addEventListener('mousemove', (e) => {
+canvas.addEventListener('ontouchmove', (e) => {
     if(isPressed) {
         const x2 = e.offsetX
         const y2 = e.offsetY
